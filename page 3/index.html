@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitTraders - Bitcoin Investment</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="container">
+        <div
+          id="headerDiv"
+          class="d-flex flex-row p-md-4 gap-4 align-items-center"
+        >
+          <img
+            id="headerImg"
+            src="/images/headLogo.png"
+            alt="Bitcoin Logo"
+            width="80"
+            height="80"
+          />
+          <div>
+            <h1 id="headerH1" class="responsive-heading">The BitTraders</h1>
+            <p
+              id="headerP"
+              class="responsive-subheading d-flex justify-content-md-end ps-lg-5"
+            >
+              <em class="ps-lg-5">Start investing in the Future</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- section One -->
+      <section
+        id="section-one"
+        class="container d-flex flex-column align-items-center"
+      >
+        <!-- Hero Section -->
+        <div class="hero-section text-center py-2 my-4">
+          <p class="hero-title responsive-heading text-warning">
+            START MAKING <br /><span id="money">MONEY</span><br />
+            WITH BITCOIN
+          </p>
+          <div class="row">
+            <button
+              id="getStarted"
+              class="btn btn-warning btn-md-lg px-5 py-3"
+              type="button"
+            >
+              GET STARTED
+            </button>
+          </div>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="graph-section my-4">
+          <p class="section-title text-dark text-center responsive-subheading">
+            EVOLUTION OF BITCOIN
+          </p>
+          <div class="d-flex justify-content-center mb-3">
+            <img
+              src="/images/graph.png"
+              alt="Bitcoin Price Graph"
+              class="graph\-img"
+              width="300"
+              height="auto"
+            />
+          </div>
+          <div class="row">
+            <button
+              id="viewDetails"
+              class="btn btn-warning btn-md-lg px-5 py-3 w-100"
+              type="button"
+            >
+              VIEW DETAILS
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- section Two -->
+      <section id="section-two" class="d-none text-dark container m-auto">
+        <div
+          class="container py-2 d-flex justify-content-center align-items-center"
+        >
+          <!-- Section Two -->
+          <div
+            id="sectionTwo"
+            class="d-flex flex-column justify-content-center align-items-center p-4 calculator-section"
+          >
+            <h3 class="mb-4">Profit Calculator</h3>
+
+            <!-- Investment Amounts -->
+            <div id="investmentAmounts" class="container text-center my-3">
+              <h5 class="fw-bold">IF you invested</h5>
+              <div class="row g-2 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill amount-option">
+                    $250 <br />
+                    <small>(0.092BTC)</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill amount-option">
+                    $350 <br />
+                    <small>(0.145BTC)</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill amount-option">
+                    $500 <br />
+                    <small>(0.264BTC)</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- In Bitcoin -->
+            <div class="container text-center my-3 w-100">
+              <h3>In Bitcoin</h3>
+              <div class="row g-2 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill period-option">
+                    30 <br />
+                    <small>day ago</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill period-option">
+                    60 <br />
+                    <small>days ago</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill period-option">
+                    90 <br />
+                    <small>day ago</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Field -->
+            <div class="row mb-3 justify-content-center w-100">
+              <div class="col-12 col-sm-8 col-md-12 col-lg-12">
+                <input
+                  type="text"
+                  id="resultInput"
+                  class="form-control text-center text-warning fw-bold px-3 py-3 border border-warning border-2"
+                  readonly
+                  value="$0.00"
+                />
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="row justify-content-center w-100">
+              <div class="col-12 col-sm-8 col-md-12 col-lg-12 d-grid gap-3">
+                <button id="calculateBtn" class="btn btn-warning btn-lg">
+                  CALCULATE NOW
+                </button>
+                <button id="continueBtn" class="d-none btn btn-success btn-lg">
+                  CONTINUE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section three -->
+      <section class="d-none" id="section-three">
+        <div
+          class="container py-2 d-flex justify-content-center align-items-center text-dark"
+        >
+          <div
+            id="sectionThree"
+            class="d-flex flex-column justify-content-center align-items-center p-4 calculator-section"
+          >
+            <h3 class="mb-4 text-center">Investment Profile</h3>
+            <p class="text-center">
+              Let's create your personal investor profile.
+            </p>
+
+            <!-- Choose your investment -->
+            <div id="investmentGroup" class="container text-center my-3">
+              <h5 class="fw-bold">IF you invested</h5>
+              <div class="row g-2 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    $250 <br />
+                    <small>(0.092BTC)</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    $350 <br />
+                    <small>(0.145BTC)</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    $500 <br />
+                    <small>(0.264BTC)</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invest Period -->
+            <div id="periodGroup" class="container text-center my-3">
+              <h5 class="fw-bold">Invest Period</h5>
+              <div class="row g-2 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    2 <br />
+                    <small>months</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    4 <br />
+                    <small>months</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    6 <br />
+                    <small>months</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Risk Preferences -->
+            <div id="riskGroup" class="container text-center my-3">
+              <h5 class="fw-bold">Risk Preferences</h5>
+              <div class="row g-2 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    Low <br />
+                    <small>risk</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    Medium <br />
+                    <small>risk</small>
+                  </span>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <span class="btn btn-outline-warning flex-fill">
+                    High <br />
+                    <small>risk</small>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="row justify-content-center w-100 mt-3">
+              <div class="col-12 col-sm-8 col-md-12 col-lg-12 d-grid">
+                <button class="btn btn-warning btn-lg w-100" id="continueBtn3">
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fourth Section -->
+      <section id="section-four" class="d-none container py-4 text-dark">
+        <!-- Title -->
+        <div class="row">
+          <div class="col-12 mb-4">
+            <h3 class="text-center">Investor Profile</h3>
+          </div>
+        </div>
+
+        <!-- General Information -->
+        <div class="row mb-4 justify-content-center align-items-center">
+          <div class="col-12 col-lg-8">
+            <div class="p-3 border rounded shadow-sm bg-light h-100">
+              <!-- Profile Section -->
+              <div class="row align-items-center mb-4">
+                <!-- Profile Image -->
+                <div
+                  class="col-12 col-sm-4 col-md-2 text-center text-md-start mb-3 mb-md-0"
+                >
+                  <img
+                    src="/images/Profile-pic.png"
+                    alt="Profile"
+                    class="img-fluid rounded-circle border"
+                    style="max-width: 100px; height: auto"
+                  />
+                </div>
+
+                <!-- Profile ID -->
+                <div
+                  class="col-12 col-sm-8 col-md-10 text-center text-sm-start"
+                >
+                  <h5 class="mb-0">USER-ID: 84723B1</h5>
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div
+                  class="col-12 col-sm-8 col-md-10 text-center text-sm-start"
+                >
+                  <h5 class="mb-0 text-success">
+                    Your personal profile has been created succesfully!
+                    Estimated profit from your investment:
+                    <strong> $11,576.21</strong>
+                  </h5>
+                </div>
+              </div>
+              <h6 class="fw-bold mb-3">General Information</h6>
+              <p class="mb-1"><strong>User ID:</strong> 84723B1</p>
+              <p class="mb-1"><strong>Bitcoin Bank ID:</strong> 94-2FJI3-310</p>
+              <p class="mb-1">
+                <strong>Status:</strong> Not confirmed
+                <a href="#" class="text-decoration-none ms-2">EDIT Profile</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Edit Profile Button -->
+          <div class="col-12 col-lg-8 text-center text-lg-end mt-4 mt-lg-3">
+            <button class="btn btn-outline-warning w-100 w-md-auto">
+              CREATE
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid pt-4">
+      <div class="container">
+        <div
+          id="footerDiv"
+          class="d-flex flex-lg-row flex-md-row flex-sm-row justify-content-center align-items-center gap-3 p-4"
+        >
+          <img
+            id="footerImg"
+            src="/images/bitcoin.png"
+            alt="Bitcoin Logo"
+            width="50"
+            height="50"
+          />
+          <p id="footerP" class="text-center px-md-3 px-sm-4 responsive-body">
+            &copy; 2024 The BitTraders Inc. All rights reserved.
+          </p>
+        </div>
+        <div
+          class="d-flex flex-column flex-md-row flex-sm-row justify-content-between align-items-center gap-3 pb-4 footer-content"
+        >
+          <div class="footer-links-container">
+            <a href="#" class="footer-links responsive-body">Privacy Policy</a>
+            <span class="text-warning mx-2">|</span>
+            <a href="#" class="footer-links responsive-body">Terms of Use</a>
+            <span class="text-warning mx-2">|</span>
+            <a href="#" class="footer-links responsive-body">Legal</a>
+            <span class="text-warning mx-2">|</span>
+            <a href="#" class="footer-links responsive-body">Site Map</a>
+          </div>
+          <div
+            class="social-icons-container d-flex flex-row justify-content-center align-items-center gap-3"
+          >
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f fa-lg"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-twitter fa-lg"></i
+            ></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-youtube fa-lg"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Toast Notification -->
+    <div class="position-fixed top-20 end-0 p-3" style="z-index: 1100">
+      <div
+        id="notification"
+        class="toast align-items-center text-bg-light border-0 d-none"
+        role="alert"
+      >
+        <div
+          class="d-flex flex-row justify-content-center align-items-center px-2"
+        >
+          <img
+            src="/images/Profile-pic.png"
+            alt="Bitcoin"
+            class="rounded me-2"
+            width="50"
+            height="50"
+          />
+          <div class="toast-body">
+            <strong>Woot! Notification!</strong><br />
+            Josh just earned $3,206.58 (378% ROI)
+          </div>
+
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
